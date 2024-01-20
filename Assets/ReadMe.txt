@@ -1,0 +1,1 @@
+Create a system, following the MVC (Model-View-Controller) design pattern, that utilizes character images and JSON data, similar to the one demonstrated in the video.
