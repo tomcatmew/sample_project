@@ -7,8 +7,8 @@ using UnityEngine.UI;
 namespace SampleOne
 {
     /// <summary>
-    /// the ListItemView will attach to each of the List character UI gameobject
-    /// access the image and text fields
+    /// the ListItemView will attach to each of the character UI gameobject prefabs in the list
+    /// It has access to the image and text fields
     /// </summary>
     public class ListItemView : MonoBehaviour
     {
@@ -35,6 +35,7 @@ namespace SampleOne
             image.sprite = characterData.avatar;
             Text text = characterName.GetComponent<Text>();
             text.text = characterData.name;
+            // Bind the callback function to button
             button.onClick.AddListener(() => callback(characterData));
         }
     }

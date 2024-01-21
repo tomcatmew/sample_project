@@ -5,7 +5,7 @@ using UnityEngine;
 namespace SampleOne
 {
     /// <summary>
-    /// a class is used to parse the JSON data to CharacterData.
+    /// A simple JSON parser which will process the character data JSON file to CharacterData class
     /// </summary>
     public class JSONImporter
     {
@@ -23,13 +23,17 @@ namespace SampleOne
                 ReadObjectKey(words, ref index);
                 ReadBracketLeft(words, ref index);
                 brackets += 1;
+                //Read the character name
                 ReadNameKey(words, ref index);
                 string temptName = words[index++].Replace("\"", "");
+                //Read the sprite path
                 ReadSpritePathKey(words, ref index);
                 string temptSpritePath = words[index++].Replace("\"", "");
+                //Read the sprite index key
                 ReadSpriteIndexKey(words, ref index);
                 int temptSpriteIndex;
                 bool success = int.TryParse(words[index++], out temptSpriteIndex);
+                // Check if the Sprite Index is integer
                 if (success)
                 {
                     Sprite[] avatarAll = Resources.LoadAll<Sprite>(temptSpritePath);

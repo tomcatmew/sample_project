@@ -6,8 +6,8 @@ using UnityEngine.UI;
 namespace SampleOne
 {
     /// <summary>
-    /// the DetailView will attach to the character detail UI gameobject
-    /// access the image and text field of detail UI
+    /// The DetailView will attach to the character detail UI gameobject
+    /// It has access to access the image and text field of detail UI
     /// </summary>
     public class DetailView : MonoBehaviour
     {

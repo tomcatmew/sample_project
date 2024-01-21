@@ -5,8 +5,8 @@ using UnityEngine;
 namespace SampleOne
 {
     /// <summary>
-    /// Defines a model that stores all characters data.
-    /// After importing, Character data will be all stored in CharacterDatabase SO.
+    /// Defines the model that stores all characters data.
+    /// After importing, Character data will be all stored in CharacterDatabase scriptable object.
     /// </summary>
     public class CharacterData
     {
@@ -22,7 +22,7 @@ namespace SampleOne
             this.avatar = avatar;
         }
     }
-
+    // Scriptable object is added to asset menu, but we don't need to create the scriptable object from editor
     [CreateAssetMenu(fileName = "CharacterDatabase", menuName = "SampleOne/CharacterDatabase")]
     public class CharacterDatabase : ScriptableObject
     {

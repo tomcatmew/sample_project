@@ -887,9 +887,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72b4e9d0015170641b9a9d2ced1b82b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  importController: {fileID: 0}
   itemUIPrefab: {fileID: 0}
   detailView: {fileID: 0}
+  jsonPath: Data/CharacterData.json
   characterDatabase: {fileID: 0}
 --- !u!1 &1204753960
 GameObject:
@@ -1361,8 +1361,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 563c4e83974c79f44992e38fca4497a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avatarDetail: {fileID: 0}
-  characterNameDetail: {fileID: 0}
+  avatarDetail: {fileID: 29823686}
+  characterNameDetail: {fileID: 58435895}
 --- !u!1 &1516584944
 GameObject:
   m_ObjectHideFlags: 0
