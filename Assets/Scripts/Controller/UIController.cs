@@ -11,7 +11,7 @@ namespace SampleOne
     /// </summary>
     public class UIController : MonoBehaviour
     {
-        public ImportController importController;
+        //public ImportController importController;
         public GameObject itemUIPrefab;
         public DetailView detailView; 
         [HideInInspector]
@@ -25,16 +25,12 @@ namespace SampleOne
                     Debug.LogError("detailView cananot be found.");
             }
 
-            if (importController == null)
+            if (ImportController.sharedInstance == null)
             {
-                importController = FindFirstObjectByType<ImportController>();
-                if (importController == null)
-                    Debug.LogError("importController cananot be found.");
-                else
-                    characterDatabase = importController.ImportCharacterData();
+                Debug.LogError("cannot find ImportController.");
             }
             else
-                characterDatabase = importController.ImportCharacterData();
+                characterDatabase = ImportController.sharedInstance.ImportCharacterData();
 
             if (itemUIPrefab == null)
             {
